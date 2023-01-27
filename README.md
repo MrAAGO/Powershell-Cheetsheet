@@ -16,7 +16,18 @@ $hosts | ForEach-Object {
       $_    
 }
 ```
+![2](https://user-images.githubusercontent.com/86381942/214986304-9c233583-5cfb-48af-b681-f24339ab2662.png)
 
+
+- To ping each host in the list and check if it is online:
+
+```powershell
+$hosts = Get-Content -Path C:\Powershell\hosts.txt
+$hosts | ForEach-Object {
+      Test-Connection -ComputerName $_ -Count 1 -ErrorAction SilentlyContinue
+}
+```
+![3](https://user-images.githubusercontent.com/86381942/214986336-3ff0a6f1-c942-4d69-bc81-154cdee337c8.png)
 
 
 
