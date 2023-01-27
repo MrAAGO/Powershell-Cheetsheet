@@ -8,6 +8,8 @@
 - Read the contents of a file with a specific encoding  `Get-Content -Path "C:\example.txt" -Encoding UTF8`
 
 ## ForEach-object
+- To show content of the file with foreach objects.
+
 ```powershell
 $hosts = Get-Content -Path C:\Powershell\hosts.txt
 $hosts | ForEach-Object {
