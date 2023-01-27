@@ -50,6 +50,26 @@ $test | ForEach-Object {
 ```
 ![5](https://user-images.githubusercontent.com/86381942/214987862-54d11985-01ea-4a13-97a2-75dfd4b2ef2e.png)
 
+- To add the hostname to each line of the file test.txt
+
+```powershell
+$test = Get-Content -Path C:\Powershell\test.txt
+$test | ForEach-Object {
+      Write-Host "$env:COMPUTERNAME : $_" -BackgroundColor Blue -ForegroundColor White
+}
+```
+
+![6](https://user-images.githubusercontent.com/86381942/214988666-f73a337d-84d6-484f-96b2-08f6307f81d5.png)
+
+- To add the current date and time to each line of the test.txt file:
+
+```powershell
+$test = Get-Content -Path C:\Powershell\test.txt
+$test | ForEach-Object {
+      Write-Host (Get-Date) + " : $_" -BackgroundColor Blue -ForegroundColor White
+}
+```
+![7](https://user-images.githubusercontent.com/86381942/214989827-41034f8e-b196-485e-b609-2f593edd8385.png)
 
 
 
